@@ -17,9 +17,17 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack{
-                List(shoppingItems)
-                { shoppingItem in
-                    ShoppingRow(shoppingItem: shoppingItem)
+                List()
+                {
+                    ForEach(shoppingItems){ item in
+                        ShoppingRow(shoppingItem: item)
+                    }.onDelete(perform: { indexSet in
+                        removeRows(at: indexSet)
+                    })
+                    
+                }
+                .toolbar{
+                    EditButton()
                 }
                 NavigationLink(destination: AddProduct(shoppingItems: $shoppingItems),
                                              label: { Text("Add Product") })
@@ -28,6 +36,25 @@ struct ContentView: View {
             }
         }
         
+    }
+    
+    func removeRows(at offsets: IndexSet) {
+        shoppingItems.remove(atOffsets: offsets)
+        
+        do {
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+
+
+            let data = try encoder.encode(shoppingItems)
+            print(String(data: data, encoding: .utf8)!)
+           } catch {
+               print("JSONSerialization error:", error)
+           }
+        
+
+
+        print(shoppingItems)
     }
 }
 

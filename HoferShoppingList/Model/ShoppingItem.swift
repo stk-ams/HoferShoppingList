@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct ShoppingItem : Identifiable{
+struct ShoppingItem : Identifiable, Encodable{
     let id = UUID()
     let name: String
     let amount: Int
@@ -17,5 +17,6 @@ struct ShoppingItem : Identifiable{
         self.name = name
         self.amount = amount
     }
+
     
 }
