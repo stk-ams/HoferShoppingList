@@ -15,6 +15,7 @@
 		B2764C322AE3E08B00B4C463 /* ShoppingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2764C312AE3E08B00B4C463 /* ShoppingRow.swift */; };
 		B2764C342AE3E82A00B4C463 /* AddProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2764C332AE3E82A00B4C463 /* AddProduct.swift */; };
 		B2764C362AE3E8D700B4C463 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2764C352AE3E8D700B4C463 /* DetailView.swift */; };
+		B27B1E042B52B77C00DD17E1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B1E032B52B77C00DD17E1 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B2764C312AE3E08B00B4C463 /* ShoppingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingRow.swift; sourceTree = "<group>"; };
 		B2764C332AE3E82A00B4C463 /* AddProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProduct.swift; sourceTree = "<group>"; };
 		B2764C352AE3E8D700B4C463 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		B27B1E032B52B77C00DD17E1 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		B2764C1E2AE3D72600B4C463 /* HoferShoppingList */ = {
 			isa = PBXGroup;
 			children = (
+				B27B1E022B52B74000DD17E1 /* Helper */,
 				B2764C302AE3E05E00B4C463 /* UI */,
 				B2764C2D2AE3DF6200B4C463 /* Model */,
 				B2764C1F2AE3D72600B4C463 /* HoferShoppingListApp.swift */,
@@ -93,6 +96,14 @@
 				B2764C352AE3E8D700B4C463 /* DetailView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		B27B1E022B52B74000DD17E1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B27B1E032B52B77C00DD17E1 /* Helper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2764C322AE3E08B00B4C463 /* ShoppingRow.swift in Sources */,
+				B27B1E042B52B77C00DD17E1 /* Helper.swift in Sources */,
 				B2764C362AE3E8D700B4C463 /* DetailView.swift in Sources */,
 				B2764C2F2AE3DF8B00B4C463 /* ShoppingItem.swift in Sources */,
 				B2764C222AE3D72600B4C463 /* ContentView.swift in Sources */,

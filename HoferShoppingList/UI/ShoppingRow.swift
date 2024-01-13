@@ -14,7 +14,7 @@ struct ShoppingRow: View {
         var body: some View {
             HStack
             {
-                Image(systemName: ".image")
+                Image(systemName: ".plus")
                 Text("\(shoppingItem.name)")
                 Text("Anzahl \(shoppingItem.amount)").foregroundColor(Color.blue)
             }

@@ -8,15 +8,8 @@
 import Foundation
 
 
-struct ShoppingItem : Identifiable, Encodable{
+struct ShoppingItem : Identifiable, Encodable, Decodable{
     let id = UUID()
     let name: String
     let amount: Int
-    
-    init(name: String, amount: Int) {
-        self.name = name
-        self.amount = amount
-    }
-
-    
 }

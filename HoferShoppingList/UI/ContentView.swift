@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var shoppingItems = [
-        ShoppingItem(name: "Apfel", amount: 3),
-        ShoppingItem(name: "Banane", amount: 2)
-        
-    ]
+    @State var shoppingItems = Helper.readData()
     
     var body: some View {
         NavigationView{

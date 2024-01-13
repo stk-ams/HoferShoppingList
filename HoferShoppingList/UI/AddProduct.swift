@@ -60,25 +60,11 @@ struct AddProduct: View {
                 Button("Create") {
                     let item = ShoppingItem(name: name, amount: amount)
                     shoppingItems.append(item)
-                    
-                    
-                    do {
-                        let encoder = JSONEncoder()
-                        encoder.outputFormatting = .prettyPrinted
-
-
-                        let data = try encoder.encode(shoppingItems)
-                        print(String(data: data, encoding: .utf8)!)
-                       } catch {
-                           print("JSONSerialization error:", error)
-                       }
-                    
-                    
-                    
-                    
-                    
+                    Helper.writeData(shoppingItems)
                     dismiss()
                 }
+                
+                
                 
             }
            
