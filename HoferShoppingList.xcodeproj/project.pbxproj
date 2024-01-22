@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B2764C202AE3D72600B4C463 /* HoferShoppingListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2764C1F2AE3D72600B4C463 /* HoferShoppingListApp.swift */; };
-		B2764C222AE3D72600B4C463 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2764C212AE3D72600B4C463 /* ContentView.swift */; };
+		B2764C222AE3D72600B4C463 /* MyContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2764C212AE3D72600B4C463 /* MyContentView.swift */; };
 		B2764C242AE3D72800B4C463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2764C232AE3D72800B4C463 /* Assets.xcassets */; };
 		B2764C272AE3D72800B4C463 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2764C262AE3D72800B4C463 /* Preview Assets.xcassets */; };
 		B2764C2F2AE3DF8B00B4C463 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2764C2E2AE3DF8B00B4C463 /* ShoppingItem.swift */; };
@@ -16,12 +16,25 @@
 		B2764C342AE3E82A00B4C463 /* AddProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2764C332AE3E82A00B4C463 /* AddProduct.swift */; };
 		B2764C362AE3E8D700B4C463 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2764C352AE3E8D700B4C463 /* DetailView.swift */; };
 		B27B1E042B52B77C00DD17E1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B1E032B52B77C00DD17E1 /* Helper.swift */; };
+		B2A42E1E2B5BB31E00280B24 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2A42E202B5BB31E00280B24 /* Localizable.strings */; };
+		C557F3622B5B7298007409AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557F3612B5B7298007409AE /* ContentView.swift */; };
+		C557F36A2B5B8353007409AE /* HoferShoppingListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C557F3692B5B8353007409AE /* HoferShoppingListTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C557F36B2B5B8353007409AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2764C142AE3D72600B4C463 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2764C1B2AE3D72600B4C463;
+			remoteInfo = HoferShoppingList;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B2764C1C2AE3D72600B4C463 /* HoferShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoferShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2764C1F2AE3D72600B4C463 /* HoferShoppingListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoferShoppingListApp.swift; sourceTree = "<group>"; };
-		B2764C212AE3D72600B4C463 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B2764C212AE3D72600B4C463 /* MyContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContentView.swift; sourceTree = "<group>"; };
 		B2764C232AE3D72800B4C463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2764C262AE3D72800B4C463 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B2764C2E2AE3DF8B00B4C463 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
@@ -29,10 +42,22 @@
 		B2764C332AE3E82A00B4C463 /* AddProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProduct.swift; sourceTree = "<group>"; };
 		B2764C352AE3E8D700B4C463 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		B27B1E032B52B77C00DD17E1 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		B2A42E1F2B5BB31E00280B24 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B2A42E212B5BB32500280B24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C557F3612B5B7298007409AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C557F3672B5B8352007409AE /* HoferShoppingListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoferShoppingListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C557F3692B5B8353007409AE /* HoferShoppingListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoferShoppingListTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B2764C192AE3D72600B4C463 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C557F3642B5B8352007409AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				B2764C1E2AE3D72600B4C463 /* HoferShoppingList */,
+				C557F3682B5B8353007409AE /* HoferShoppingListTests */,
 				B2764C1D2AE3D72600B4C463 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				B2764C1C2AE3D72600B4C463 /* HoferShoppingList.app */,
+				C557F3672B5B8352007409AE /* HoferShoppingListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +94,7 @@
 				B2764C1F2AE3D72600B4C463 /* HoferShoppingListApp.swift */,
 				B2764C232AE3D72800B4C463 /* Assets.xcassets */,
 				B2764C252AE3D72800B4C463 /* Preview Content */,
+				B2A42E202B5BB31E00280B24 /* Localizable.strings */,
 			);
 			path = HoferShoppingList;
 			sourceTree = "<group>";
@@ -90,10 +118,11 @@
 		B2764C302AE3E05E00B4C463 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				B2764C212AE3D72600B4C463 /* ContentView.swift */,
+				B2764C212AE3D72600B4C463 /* MyContentView.swift */,
 				B2764C312AE3E08B00B4C463 /* ShoppingRow.swift */,
 				B2764C332AE3E82A00B4C463 /* AddProduct.swift */,
 				B2764C352AE3E8D700B4C463 /* DetailView.swift */,
+				C557F3612B5B7298007409AE /* ContentView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -104,6 +133,14 @@
 				B27B1E032B52B77C00DD17E1 /* Helper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		C557F3682B5B8353007409AE /* HoferShoppingListTests */ = {
+			isa = PBXGroup;
+			children = (
+				C557F3692B5B8353007409AE /* HoferShoppingListTests.swift */,
+			);
+			path = HoferShoppingListTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +163,24 @@
 			productReference = B2764C1C2AE3D72600B4C463 /* HoferShoppingList.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C557F3662B5B8352007409AE /* HoferShoppingListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C557F36F2B5B8353007409AE /* Build configuration list for PBXNativeTarget "HoferShoppingListTests" */;
+			buildPhases = (
+				C557F3632B5B8352007409AE /* Sources */,
+				C557F3642B5B8352007409AE /* Frameworks */,
+				C557F3652B5B8352007409AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C557F36C2B5B8353007409AE /* PBXTargetDependency */,
+			);
+			name = HoferShoppingListTests;
+			productName = HoferShoppingListTests;
+			productReference = C557F3672B5B8352007409AE /* HoferShoppingListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -139,6 +194,10 @@
 					B2764C1B2AE3D72600B4C463 = {
 						CreatedOnToolsVersion = 15.0;
 					};
+					C557F3662B5B8352007409AE = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = B2764C1B2AE3D72600B4C463;
+					};
 				};
 			};
 			buildConfigurationList = B2764C172AE3D72600B4C463 /* Build configuration list for PBXProject "HoferShoppingList" */;
@@ -148,6 +207,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = B2764C132AE3D72600B4C463;
 			productRefGroup = B2764C1D2AE3D72600B4C463 /* Products */;
@@ -155,6 +215,7 @@
 			projectRoot = "";
 			targets = (
 				B2764C1B2AE3D72600B4C463 /* HoferShoppingList */,
+				C557F3662B5B8352007409AE /* HoferShoppingListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -165,7 +226,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2764C272AE3D72800B4C463 /* Preview Assets.xcassets in Resources */,
+				B2A42E1E2B5BB31E00280B24 /* Localizable.strings in Resources */,
 				B2764C242AE3D72800B4C463 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C557F3652B5B8352007409AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,15 +247,44 @@
 			files = (
 				B2764C322AE3E08B00B4C463 /* ShoppingRow.swift in Sources */,
 				B27B1E042B52B77C00DD17E1 /* Helper.swift in Sources */,
+				C557F3622B5B7298007409AE /* ContentView.swift in Sources */,
 				B2764C362AE3E8D700B4C463 /* DetailView.swift in Sources */,
 				B2764C2F2AE3DF8B00B4C463 /* ShoppingItem.swift in Sources */,
-				B2764C222AE3D72600B4C463 /* ContentView.swift in Sources */,
+				B2764C222AE3D72600B4C463 /* MyContentView.swift in Sources */,
 				B2764C342AE3E82A00B4C463 /* AddProduct.swift in Sources */,
 				B2764C202AE3D72600B4C463 /* HoferShoppingListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C557F3632B5B8352007409AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C557F36A2B5B8353007409AE /* HoferShoppingListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C557F36C2B5B8353007409AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2764C1B2AE3D72600B4C463 /* HoferShoppingList */;
+			targetProxy = C557F36B2B5B8353007409AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B2A42E202B5BB31E00280B24 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2A42E1F2B5BB31E00280B24 /* de */,
+				B2A42E212B5BB32500280B24 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B2764C282AE3D72800B4C463 /* Debug */ = {
@@ -318,6 +416,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HoferShoppingList/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "For protection we need face id";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -330,9 +429,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.HoferShoppingList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -346,6 +448,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HoferShoppingList/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "For protection we need face id";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -358,9 +461,46 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.HoferShoppingList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C557F36D2B5B8353007409AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.HoferShoppingListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoferShoppingList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HoferShoppingList";
+			};
+			name = Debug;
+		};
+		C557F36E2B5B8353007409AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhj.ims.HoferShoppingListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoferShoppingList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HoferShoppingList";
 			};
 			name = Release;
 		};
@@ -381,6 +521,15 @@
 			buildConfigurations = (
 				B2764C2B2AE3D72800B4C463 /* Debug */,
 				B2764C2C2AE3D72800B4C463 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C557F36F2B5B8353007409AE /* Build configuration list for PBXNativeTarget "HoferShoppingListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C557F36D2B5B8353007409AE /* Debug */,
+				C557F36E2B5B8353007409AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
