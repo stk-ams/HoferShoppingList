@@ -1,0 +1,27 @@
+product-name="Product Name";
+product-name-placeholder="Please enter your product name";
+
+category-name="Category";
+category-name-placeholder="Please enter your category";
+
+amount-name="Amount";
+amount-name-placeholder="Please enter your amount";
+
+
+unit-name="Unit";
+unit-name-placeholder="Please enter your unit";
+
+add-name="Add Item";
+
+authenticate-name="Authenticate";
+
+locked-name="LOCKED";
+
+fruits="Fruits";
+vegetables="Vegetables";
+meat="Meat";
+bakery="Bakery";
+beverages="Beverages";
+snacks="Snacks";
+frozen="Frozen";
+other="Other";

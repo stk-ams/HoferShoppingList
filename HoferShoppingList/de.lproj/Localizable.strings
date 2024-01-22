@@ -1,0 +1,27 @@
+product-name="Produktname";
+product-name-placeholder="Bitte geben Sie den Produktnamen ein";
+
+category-name="Kategorie";
+category-name-placeholder="Bitte wählen Sie die Kategorie aus";
+
+amount-name="Anzahl";
+amount-name-placeholder="Bitte geben Sie die Anzahl ein";
+
+
+unit-name="Einheit";
+unit-name-placeholder="Bitte geben Sie die Einheit ein";
+
+add-name="Lebensmittel hinzufügen";
+
+authenticate-name="Authentifizieren";
+
+locked-name="GESPERRT";
+
+fruits="Früchte";
+vegetables="Gemüse";
+meat="Fleisch";
+bakery="Brot";
+beverages="Getränke";
+snacks="Snacks";
+frozen="Gefroren";
+other="Andere";

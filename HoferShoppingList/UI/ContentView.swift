@@ -1,63 +1,55 @@
-//
-//  ContentView.swift
-//  HoferShoppingList
-//
-//  Created by Metry Saad Antonius on 21.10.23.
-//
-
 import SwiftUI
+import LocalAuthentication
 
 struct ContentView: View {
-    @State var shoppingItems = [
-        ShoppingItem(name: "Apfel", amount: 3),
-        ShoppingItem(name: "Banane", amount: 2)
-        
-    ]
+    @State private var unlocked = false
+    @State private var text = NSLocalizedString("locked-name", comment:"")
     
     var body: some View {
-        NavigationView{
-            VStack{
-                List()
-                {
-                    ForEach(shoppingItems){ item in
-                        ShoppingRow(shoppingItem: item)
-                    }.onDelete(perform: { indexSet in
-                        removeRows(at: indexSet)
-                    })
-                    
-                }
-                .toolbar{
-                    EditButton()
-                }
-                NavigationLink(destination: AddProduct(shoppingItems: $shoppingItems),
-                                             label: { Text("Add Product") })
-                
-                
+        VStack {
+            Text("Hofer Cart").font(.largeTitle)
+            Text(LocalizedStringKey(text))
+                .bold()
+                .padding()
+            
+            Button("authenticate-name") {
+                authenticate()
+            }
+            
+            
+            .fullScreenCover(isPresented: $unlocked) {
+                MyContentView()
             }
         }
-        
     }
     
-    func removeRows(at offsets: IndexSet) {
-        shoppingItems.remove(atOffsets: offsets)
-        
-        do {
-            let encoder = JSONEncoder()
-            encoder.outputFormatting = .prettyPrinted
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
 
+        // Check whether it's possible to use biometric authentication
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
 
-            let data = try encoder.encode(shoppingItems)
-            print(String(data: data, encoding: .utf8)!)
-           } catch {
-               print("JSONSerialization error:", error)
-           }
-        
-
-
-        print(shoppingItems)
+            // Handle events
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "This is a security check reason.") { success, authenticationError in
+                
+                DispatchQueue.main.async {
+                    if success {
+                        self.text = "UNLOCKED"
+                        self.unlocked = true
+                    } else {
+                        self.text = "There was a problem!"
+                    }
+                }
+            }
+        } else {
+            self.text = "Phone does not have biometrics"
+        }
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

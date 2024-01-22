@@ -10,42 +10,50 @@ import SwiftUI
 struct AddProduct: View {
     @Binding var shoppingItems: [ShoppingItem]
     @AppStorage("name")   var name: String = ""
-    @AppStorage("category")   var category: String = ""
+    @State var category: Category = .other
     @AppStorage("amount")   var amount: Int = 1
-    @AppStorage("unit") var unit: String = "Stück"
+    @AppStorage("unit") var unit: String = "kg"
     @Environment(\.dismiss) var dismiss
+    
+    func createItem(){
+        let item = ShoppingItem(name: name, unit: unit, amount: amount, category: category)
+        shoppingItems.append(item)
+        Helper.writeData(shoppingItems)
+        dismiss()
+    }
 
     var body: some View {
         
             VStack{
                 Form {
-                    Section(header: Text("Product Name") ) {
-                        TextField("Geben Sie Ihren Produktnamen ein", text: $name)
-                        // With padding that is equivalent to your padding.
+                    Section(header: Text("product-name") ) {
+                        TextField("product-name-placeholder", text: $name)
+                        
                             .padding(.vertical, 10)
-                        // .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-                    }
-                    
-                    Section(header: Text("Category") ) {
-                        TextField("Geben Sie die Kategorie ein", text: $category)
-                        // With padding that is equivalent to your padding.
-                            .padding(.vertical, 10)
-                        // .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                        
                     }
                     
                     
-                    Section(header: Text("Amount") ) {
-                        TextField("Geben Sie die Anzahl ein", value: $amount, format: .number)
-                        // With padding that is equivalent to your padding.
-                            .padding(.vertical, 10)
-                        // .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                    Section(header: Text("category-name")) {
+                                    Picker("category-name-placeholder", selection: $category) {
+                                        ForEach(Category.allCases, id: \.self) { category in
+                                            Text(category.localized).tag(category)
+                                                           }
+                        }
                     }
                     
-                    Section(header: Text("Unit") ) {
-                        TextField("Geben Sie die Einheit ein", text: $unit)
-                        // With padding that is equivalent to your padding.
+                    Section(header: Text("amount-name") ) {
+                        TextField("amount-name-placeholder", value: $amount, format: .number)
+                        
                             .padding(.vertical, 10)
-                        // .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                        
+                    }
+                    
+                    Section(header: Text("unit-name") ) {
+                        TextField("unit-name-placeholder", text: $unit)
+                        
+                            .padding(.vertical, 10)
+                        
                     }
                     
                     
@@ -57,28 +65,11 @@ struct AddProduct: View {
                     
                 }
                 
-                Button("Create") {
-                    let item = ShoppingItem(name: name, amount: amount)
-                    shoppingItems.append(item)
-                    
-                    
-                    do {
-                        let encoder = JSONEncoder()
-                        encoder.outputFormatting = .prettyPrinted
-
-
-                        let data = try encoder.encode(shoppingItems)
-                        print(String(data: data, encoding: .utf8)!)
-                       } catch {
-                           print("JSONSerialization error:", error)
-                       }
-                    
-                    
-                    
-                    
-                    
-                    dismiss()
+                Button("add-name") {
+                    createItem()
                 }
+                
+                
                 
             }
            
